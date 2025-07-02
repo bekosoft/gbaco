@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBA للإنشاءات والاستثمار المحدود</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8f8f8;
+        }
+        
+        .primary-bg {
+            background-color: #44300F;
+        }
+        
+        .secondary-bg {
+            background-color: #E5DFBD;
+        }
+        
+        .complementary-bg {
+            background-color: #8D7849;
+        }
+        
+        .additional-bg {
+            background-color: #605343;
+        }
+        
+        .primary-text {
+            color: #44300F;
+        }
+        
+        .secondary-text {
+            color: #E5DFBD;
+        }
+        
+        .complementary-text {
+            color: #8D7849;
+        }
+        
+        .additional-text {
+            color: #605343;
+        }
+        
+        .hero-section {
+            background-image: linear-gradient(rgba(68, 48, 15, 0.8), rgba(68, 48, 15, 0.8)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-card:hover .blog-img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #E5DFBD;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#44300F',
+                        'secondary': '#E5DFBD',
+                        'complementary': '#8D7849',
+                        'additional': '#605343',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-tajawal">
+    <!-- Header/Navigation -->
+    <header class="primary-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <div class="w-12 h-12 rounded-full secondary-bg flex items-center justify-center mr-3">
+                            <span class="text-xl font-bold primary-text"><img src="Z:\GBA\GBA-LTD\IMG-20250626-WA0007.png" alt="Construction" class="w-full h-full object-cover"></span>
+							
+                        </div>
+                        <span class="text-xl font-bold hidden md:block">GBA للإنشاءات والاستثمار المحدود</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#" class="nav-link text-white hover:text-secondary font-medium">الرئيسية</a>
+                    <a href="#about" class="nav-link text-white hover:text-secondary font-medium">من نحن</a>
+                    <a href="#services" class="nav-link text-white hover:text-secondary font-medium">خدماتنا</a>
+                    <a href="#vision" class="nav-link text-white hover:text-secondary font-medium">الرؤية</a>
+                    <a href="#contact" class="nav-link text-white hover:text-secondary font-medium">اتصل بنا</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#" class="block py-2 text-white hover:text-secondary">الرئيسية</a>
+                <a href="#about" class="block py-2 text-white hover:text-secondary">من نحن</a>
+                <a href="#services" class="block py-2 text-white hover:text-secondary">خدماتنا</a>
+                <a href="#vision" class="block py-2 text-white hover:text-secondary">الرؤية</a>
+                <a href="#contact" class="block py-2 text-white hover:text-secondary">اتصل بنا</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">شركة رائدة في مجال الإنشاءات والاستثمار</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">نقدم حلولاً مبتكرة وخدمات عالية الجودة في مجالات الإنشاءات، تكنولوجيا المعلومات، الشحن والترحيل، والخدمات الاستشارية</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#services" class="bg-white primary-text px-8 py-3 rounded-full font-bold hover:bg-secondary hover:text-primary transition duration-300">استكشف خدماتنا</a>
+                <a href="#contact" class="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition duration-300">تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">من نحن</h2>
+                <div class="w-20 h-1 bg-complementary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="Z:\GBA\GBA-LTD\IMG-20250626-WA0007.png" alt="GBA Team" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold primary-text mb-4">GBA للإنشاءات والاستثمار المحدود</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        تأسست GBA للإنشاءات والاستثمار المحدود في العام 2023م، لتكون من الشركات الرائدة في السودان في مجالات الإنشاءات، الشحن والترحيل، تكنولوجيا المعلومات، إدارة المشاريع، الخدمات اللوجستية، الخدمات الاستشارية، ودراسات الجدوى.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        تلتزم الشركة بتقديم حلول مبتكرة وخدمات عالية الجودة، مما يجعلها الخيار الأول للعديد من العملاء في السوق السوداني والدولي.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full complementary-bg text-white mr-3">
+                                <i class="fas fa-lightbulb text-xl"></i>
+                            </div>
+                            <span class="font-bold">الابتكار</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full complementary-bg text-white mr-3">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                            <span class="font-bold">الجودة</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full complementary-bg text-white mr-3">
+                                <i class="fas fa-eye text-xl"></i>
+                            </div>
+                            <span class="font-bold">الشفافية</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full complementary-bg text-white mr-3">
+                                <i class="fas fa-handshake text-xl"></i>
+                            </div>
+                            <span class="font-bold">الثقة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 secondary-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">خدماتنا</h2>
+                <div class="w-20 h-1 bg-complementary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Z:\GBA\GBA-LTD\saas-concept-collage.jpg" alt="IT Services" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                <i class="fas fa-laptop-code text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold primary-text">تكنولوجيا المعلومات</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            نقدم حلول تكنولوجيا متكاملة تشمل أنظمة إدارة الأعمال، حلول الأمن السيبراني، وتطوير التطبيقات المخصصة لاحتياجات عملك.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Z:\GBA\GBA-LTD\excavator-action.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                <i class="fas fa-building text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold primary-text">الإنشاءات</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            تنفيذ مشاريع بناء سكنية وتجارية بمعايير عالمية، مع التركيز على الجودة والسلامة والالتزام بالمواعيد المتفق عليها.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Z:\GBA\GBA-LTD\vehicles-laptop-supply-chain-representation.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                <i class="fas fa-ship text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold primary-text">الشحن والترحيل</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            خدمات شحن محلية ودولية سريعة وموثوقة، مع حلول لوجستية متكاملة تضمن وصول بضائعك بأمان وفي الوقت المحدد.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Z:\GBA\GBA-LTD\document-marketing-strategy-business-concept.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                <i class="fas fa-tasks text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold primary-text">إدارة المشاريع</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            إدارة المشاريع من التخطيط إلى التنفيذ باحترافية عالية، مع ضمان تحقيق الأهداف ضمن الميزانية والجدول الزمني المحدد.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Z:\GBA\GBA-LTD\full-shot-delivery-people-top-view.jpg" alt="Logistics" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                <i class="fas fa-truck text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold primary-text">الخدمات اللوجستية</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            حلول تخزين ونقل متكاملة ومبتكرة، مصممة لتحسين سلسلة التوريد وزيادة كفاءة عملياتك اللوجستية.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Z:\GBA\GBA-LTD\african-man-black-suit.jpg" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                <i class="fas fa-chalkboard-teacher text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold primary-text">الخدمات الاستشارية</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            استشارات متخصصة في مجال تكنولوجيا المعلومات، الإنشاءات، والاستثمار من قبل خبراء ذوي خبرة واسعة في مختلف القطاعات.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">رؤيتنا ورسالتنا</h2>
+                <div class="w-20 h-1 bg-complementary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-secondary p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 rounded-full primary-bg text-white mr-3">
+                            <i class="fas fa-eye text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold primary-text">رؤيتنا</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        أن نكون الخيار الأول في السودان لتقديم حلول مبتكرة وموثوقة في مجالات الإنشاءات، تكنولوجيا المعلومات، والخدمات اللوجستية، مع التزامنا الدائم بمعايير الجودة العالمية.
+                    </p>
+                </div>
+                
+                <div class="bg-secondary p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 rounded-full primary-bg text-white mr-3">
+                            <i class="fas fa-bullseye text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold primary-text">رسالتنا</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        تقديم خدمات عالية الجودة مع الالتزام بالجودة والابتكار، من خلال فريق عمل محترف وبيئة عمل تحفز على الإبداع والتميز في تقديم الحلول التي تلبي تطلعات عملائنا.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold primary-text mb-6 text-center">أهدافنا</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-complementary">
+                        <h4 class="text-xl font-bold primary-text mb-3">الريادة في تكنولوجيا المعلومات</h4>
+                        <p class="text-gray-700">
+                            تطوير حلول تكنولوجية متقدمة تلبي احتياجات السوق المحلي والدولي.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-complementary">
+                        <h4 class="text-xl font-bold primary-text mb-3">التوسع في الإنشاءات</h4>
+                        <p class="text-gray-700">
+                            تنفيذ مشاريع إنشائية كبرى بمعايير عالمية في مختلف أنحاء السودان.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-complementary">
+                        <h4 class="text-xl font-bold primary-text mb-3">الخدمات الاستشارية</h4>
+                        <p class="text-gray-700">
+                            تقديم استشارات مبتكرة في مجال دراسات الجدوى لمساعدة العملاء على اتخاذ القرارات الاستثمارية الصائبة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 primary-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">آراء عملائنا</h2>
+                <div class="w-20 h-1 bg-complementary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">أحمد محمد</h4>
+                            <p class="text-sm text-complementary">مدير شركة</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">
+                        "تعاملنا مع GBA في مشروع بناء مجمع سكني، وكان أداؤهم ممتازاً من حيث الجودة والالتزام بالمواعيد. نوصي بهم بشدة."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-3">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">سارة عبد الله</h4>
+                            <p class="text-sm text-complementary">رئيسة قسم تكنولوجيا المعلومات</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">
+                        "الحلول التكنولوجية التي قدمتها GBA لشركتنا ساعدت في تحسين كفاءة العمليات بشكل ملحوظ. فريق محترف جداً."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-3">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">عمر خالد</h4>
+                            <p class="text-sm text-complementary">مدير لوجستيات</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">
+                        "خدمات الشحن واللوجستيات التي تقدمها GBA موثوقة وسريعة. تعاملنا معهم لأكثر من عام ولم نواجه أي مشاكل."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">الأسئلة الشائعة</h2>
+                <div class="w-20 h-1 bg-complementary mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-4 border-b border-gray-200 pb-2">
+                    <button class="faq-question flex justify-between items-center w-full text-right focus:outline-none">
+                        <span class="text-lg font-medium primary-text">ما هي مجالات عمل شركة GBA؟>
+                        <i class="fas fa-chevron-down text-complementary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="mt-2 text-gray-700">
+                            تعمل شركة GBA في عدة مجالات رئيسية تشمل الإنشاءات، تكنولوجيا المعلومات، الشحن والترحيل، إدارة المشاريع، الخدمات اللوجستية، الخدمات الاستشارية، ودراسات الجدوى.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mb-4 border-b border-gray-200 pb-2">
+                    <button class="faq-question flex justify-between items-center w-full text-right focus:outline-none">
+                        <span class="text-lg font-medium primary-text">كيف يمكنني التواصل مع قسم خدمة العملاء؟>
+                        <i class="fas fa-chevron-down text-complementary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="mt-2 text-gray-700">
+                            يمكنك التواصل مع قسم خدمة العملاء عبر البريد الإلكتروني gbsco.ltd.com أو عن طريق الهاتف على الرقم +249930035100 خلال ساعات العمل الرسمية من الأحد إلى الخميس من 8 صباحاً حتى 4 مساءً.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mb-4 border-b border-gray-200 pb-2">
+                    <button class="faq-question flex justify-between items-center w-full text-right focus:outline-none">
+                        <span class="text-lg font-medium primary-text">ما هي مدة تنفيذ مشروع إنشائي متوسط الحجم؟>
+                        <i class="fas fa-chevron-down text-complementary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="mt-2 text-gray-700">
+                            تختلف مدة التنفيذ حسب حجم المشروع وتعقيده، ولكن بشكل عام يمكن أن يستغرق المشروع الإنشائي المتوسط من 6 إلى 12 شهراً. نحرص دائماً على تقديم جدول زمني واقعي وملتزم به.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mb-4 border-b border-gray-200 pb-2">
+                    <button class="faq-question flex justify-between items-center w-full text-right focus:outline-none">
+                        <span class="text-lg font-medium primary-text">هل تقدمون خدمات دراسات الجدوى للمشاريع الصغيرة؟span>
+                        <i class="fas fa-chevron-down text-complementary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="mt-2 text-gray-700">
+                            نعم، نقدم دراسات الجدوى الاقتصادية والفنية والسوقية لمختلف أحجام المشاريع، بما في ذلك المشاريع الصغيرة والمتوسطة. نضمن تقديم تحليلات دقيقة تساعدك في اتخاذ القرار الاستثماري الصحيح.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mb-4 border-b border-gray-200 pb-2">
+                    <button class="faq-question flex justify-between items-center w-full text-right focus:outline-none">
+                        <span class="text-lg font-medium primary-text">ما هي ضمانات الجودة التي تقدمونها في مشاريع الإنشاءات؟>
+                        <i class="fas fa-chevron-down text-complementary transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="mt-2 text-gray-700">
+                            نلتزم بأعلى معايير الجودة في جميع مشاريعنا الإنشائية، مع ضمان لمدة عامين على الأعمال الإنشائية. كما نستخدم مواد بناء ذات جودة عالية ونخضع جميع مراحل المشروع لرقابة جودة صارمة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16 secondary-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">أحدث المقالات</h2>
+                <div class="w-20 h-1 bg-complementary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden blog-card">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Z:\GBA\GBA-LTD\18164.jpg" alt="IT Trends" class="w-full h-full object-cover blog-img transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-complementary">تكنولوجيا المعلومات | 15 يونيو 2023</span>
+                        <h3 class="text-xl font-bold primary-text my-3">أحدث الاتجاهات في أنظمة المراقبة CCTV</h3>
+                        <p class="text-gray-700 mb-4">
+                            استكشف كيف تطورت أنظمة المراقبة الأمنية في السنوات الأخيرة لتواكب التطورات التكنولوجية.
+                        </p>
+                        <a href="#" class="text-complementary font-bold hover:underline">قراءة المزيد</a>
+                    </div>
+                </div>
+                
+                <!-- Blog 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden blog-card">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Z:\GBA\GBA-LTD\still-life-business-roles-with-various-mechanism-pieces.jpg" alt="Logistics" class="w-full h-full object-cover blog-img transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-complementary">الخدمات اللوجستية | 5 يونيو 2023</span>
+                        <h3 class="text-xl font-bold primary-text my-3">تحسين سلسلة التوريد في البيئات الصعبة</h3>
+                        <p class="text-gray-700 mb-4">
+                            نصائح وحلول لتحسين كفاءة سلسلة التوريد في المناطق ذات البنية التحتية الصعبة.
+                        </p>
+                        <a href="#" class="text-complementary font-bold hover:underline">قراءة المزيد</a>
+                    </div>
+                </div>
+                
+                <!-- Blog 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden blog-card">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Feasibility" class="w-full h-full object-cover blog-img transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-complementary">دراسات الجدوى | 22 مايو 2023</span>
+                        <h3 class="text-xl font-bold primary-text my-3">أهمية دراسات الجدوى في نجاح المشاريع</h3>
+                        <p class="text-gray-700 mb-4">
+                            كيف يمكن لدراسة الجدوى الشاملة أن تحدد مصير مشروعك وتزيد من فرص نجاحه.
+                        </p>
+                        <a href="#" class="text-complementary font-bold hover:underline">قراءة المزيد</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block primary-bg text-white px-8 py-3 rounded-full font-bold hover:bg-complementary transition duration-300">عرض جميع المقالات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold primary-text mb-4">اتصل بنا</h2>
+                <div class="w-20 h-1 bg-complementary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-secondary p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold primary-text mb-6">معلومات التواصل</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold primary-text">البريد الإلكتروني</h4>
+                                    <a href="mailto:gbsco.ltd.com" class="text-gray-700 hover:underline">gbsco.ltd.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold primary-text">رقم الهاتف</h4>
+                                    <a href="tel:+249930035100" class="text-gray-700 hover:underline"> 100 035 930 249+ &nbsp;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="p-3 rounded-full primary-bg text-white mr-3">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold primary-text">العنوان</h4>
+                                    <p class="text-gray-700">الخرطوم، السودان</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold primary-text mb-4">ساعات العمل</h4>
+                            <p class="text-gray-700">الأحد - الخميس: 8:00 صباحاً - 4:00 مساءً</p>
+                            <p class="text-gray-700">الجمعة والسبت: عطلة</p>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold primary-text mb-4">تابعنا</h4>
+                            <div class="flex space-x-4 space-x-reverse">
+                                <a href="#" class="w-10 h-10 rounded-full primary-bg text-white flex items-center justify-center hover:bg-complementary transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full primary-bg text-white flex items-center justify-center hover:bg-complementary transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full primary-bg text-white flex items-center justify-center hover:bg-complementary transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full primary-bg text-white flex items-center justify-center hover:bg-complementary transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-secondary p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold primary-text mb-6">أرسل لنا رسالة</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">الاسم الكامل</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-complementary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">البريد الإلكتروني</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-complementary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">رقم الهاتف</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-complementary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">الموضوع</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-complementary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">الرسالة</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-complementary"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="primary-bg text-white px-8 py-3 rounded-full font-bold hover:bg-complementary transition duration-300 w-full">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.808944044888!2d32.53331431528846!3d15.50060499831823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDMwJzAyLjIiTiAzMsKwMzInMDguNiJF!5e1!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="primary-bg text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full secondary-bg flex items-center justify-center mr-3">
+                            <span class="text-xl font-bold primary-text">GBA</span>
+                        </div>
+                        <span class="text-xl font-bold">GBA للإنشاءات والاستثمار المحدود</span>
+                    </div>
+                    <p class="text-gray-300">
+                        شركة رائدة في السودان تقدم حلولاً متكاملة في مجالات الإنشاءات، تكنولوجيا المعلومات، الشحن والترحيل، والخدمات الاستشارية.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">الرئيسية</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-secondary transition duration-300">من نحن</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition duration-300">خدماتنا</a></li>
+                        <li><a href="#vision" class="text-gray-300 hover:text-secondary transition duration-300">الرؤية</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-secondary transition duration-300">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">خدماتنا</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">تكنولوجيا المعلومات</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">الإنشاءات</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">الشحن والترحيل</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">إدارة المشاريع</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">الخدمات اللوجستية</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">النشرة البريدية</h4>
+                    <p class="text-gray-300 mb-4">
+                        اشترك في نشرتنا البريدية لتصلك آخر الأخبار والعروض.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="بريدك الإلكتروني" class="px-4 py-2 rounded-r-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="complementary-bg text-white px-4 py-2 rounded-l-lg hover:bg-yellow-600 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">
+                    &copy; 2023 GBA للإنشاءات والاستثمار المحدود. جميع الحقوق محفوظة.
+                </p>
+                
+                <div class="flex space-x-6 space-x-reverse">
+                    <a href="#" class="text-gray-300 hover:text-secondary transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-secondary transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.style.maxHeight = null;
+                        q.querySelector('i').classList.remove('fa-chevron-up');
+                        q.querySelector('i').classList.add('fa-chevron-down');
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
